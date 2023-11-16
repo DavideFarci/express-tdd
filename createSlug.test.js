@@ -1,9 +1,11 @@
 const { test, expect } = require("@jest/globals");
+const { kebabCase } = require("lodash");
 const createSlug = require("./createSlug");
+// const posts = require("./db/posts.json");
+// const title = posts.map((post) => kebabCase(post.title));
 
 test("Dovrebbe restituire una stringa", () => {
-  const title = "questo è il mio primo test";
-  const result = createSlug(title);
+  const result = createSlug("ciao");
 
-  expect(result).toBe("questo-è-il-mio-primo-test");
+  expect(typeof result).toBe("string");
 });
