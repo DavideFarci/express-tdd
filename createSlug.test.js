@@ -15,3 +15,9 @@ test("Dovrebbe restituire una stringa in lowerCase", () => {
 
   expect(result).toBe("ciao");
 });
+
+test("dovrebbe restituire una stringa con gli spazi sostituiti da -", () => {
+  const result = createSlug("Ciao sono Davide");
+
+  expect(result).toBe("ciao-sono-davide");
+});
