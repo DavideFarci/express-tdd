@@ -1,4 +1,4 @@
-const { text, expect } = require("@jest/globals");
+const { test, expect } = require("@jest/globals");
 const createSlug = require("./createSlug");
 
 test("Dovrebbe restituire una stringa", () => {
