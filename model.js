@@ -1,1 +1,3 @@
-module.exports = class Model {};
+module.exports = class Model {
+  fileJson;
+};
