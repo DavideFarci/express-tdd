@@ -32,3 +32,9 @@ test("dovrebbe lanciare un errore in caso di titolo non presente o formato errat
 
   expect(result).toThrowError();
 });
+
+test("dovrebbe lanciare un errore se manca l’array dei post", () => {
+  const result = () => createSlug("Coroddis");
+
+  expect(result).toThrowError();
+});
