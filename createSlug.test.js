@@ -9,3 +9,9 @@ test("Dovrebbe restituire una stringa", () => {
 
   expect(typeof result).toBe("string");
 });
+
+test("Dovrebbe restituire una stringa in lowerCase", () => {
+  const result = createSlug("CIAO");
+
+  expect(result).toBe("ciao");
+});
