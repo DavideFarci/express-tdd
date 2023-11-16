@@ -1,5 +1,11 @@
 // const posts = require("./db/posts.json");
 module.exports = function (title, list) {
+  if (!title || typeof title !== "string") {
+    throw new Error(
+      "createSlug: Il titolo deve essere presente e deve essere di tipo stringa"
+    );
+  }
+
   let slug = title.toLowerCase().split(" ").join("-");
   let increment = 0;
   while (list.find((el) => el.slug === slug)) {

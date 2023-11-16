@@ -26,3 +26,9 @@ test("dovrebbe incrementare di 1 lo slug quando esiste già", () => {
 
   expect(result).toBe("cracker-alla-barbabietola-1");
 });
+
+test("dovrebbe lanciare un errore in caso di titolo non presente o formato errato", () => {
+  const result = () => createSlug(45, posts);
+
+  expect(result).toThrowError();
+});
